@@ -28,18 +28,10 @@ export default function RootLayout({ children }) {
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Sora:wght@500;600;700&display=swap" />
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" />
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       </head>
       <body>
-        <div hidden dangerouslySetInnerHTML={{ __html: `<!--
-THESIS: AI built well and governed well by one team; refuses the generic "AI agency" hero of floating chips and a card grid.
-OWN-WORLD: Ink #0A0B14 night with Spark cyan #22D3EE and Pulse violet #7C5CFF, giving way to warm Paper #F7F5F0 for ISO and trust. Sora headlines, Inter text, ruled rows not cards, hairlines, one cursor-reactive node field.
-STORY: Visitor sees the idea (spark) held inside governance (orbit), believes one team does both, and books a free consultation.
-FIRST VIEWPORT: Left, headline at 5.6rem max with "Built well. Governed well." and two actions; right, the Spark Orbit mark bare on the node field with two annotations, "the idea" and "the governance around it".
-FORM: Owner-pinned world (brand brief wins, no roll; the concept-seed script was unavailable in this session). Seed key: owner-pinned.
-FINISH: unreviewed and undocumented is unfinished; this build ends with the finish review, the verdict, and DESIGN.md
--->` }} />
         {children}
       </body>
     </html>

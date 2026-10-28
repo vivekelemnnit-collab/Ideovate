@@ -1,14 +1,10 @@
 import Header from '../components/Header';
 import Mark from '../components/Logo';
 import NodeField from '../components/NodeField';
+import Courses from '../components/Courses';
 import SmoothMotion from '../components/SmoothMotion';
 import Icon from '../components/Icons';
 
-const paths = [
-  ['Build AI', 'From a first prototype to production systems.', '#services'],
-  ['Get ISO ready', 'ISO 9001, 14001, 45001, 27001 and 42001, from gap assessment to audit day.', '#iso'],
-  ['Train your team', 'Practical courses online, in person or hybrid.', '#training'],
-];
 const services = [
   { group: 'Build AI', id: 'services', blurb: 'From a first prototype to production, connected to the systems you already run.', items: [
     ['ml', 'Custom AI and machine learning', 'Models that predict, classify and spot patterns in your own data.'],
@@ -41,58 +37,58 @@ export default function Home() {
       <SmoothMotion />
       <Header />
       <main id="top">
-        {/* HERO: the idea (spark) held inside governance (orbit) */}
-        <section className="hero dark">
-          <NodeField />
+        <section className="hero">
           <div className="wrap hero-grid">
-            <div data-hero className="hero-copy">
-              <h1>Turning your great ideas into <em>innovation.</em></h1>
-              <p className="hero-sub">Built well. Governed well.</p>
-              <p className="lead">Ideovate designs and builds AI for your business, then helps you put the quality systems around it so it can be trusted. One Winnipeg team. Since 2014.</p>
+            <h1 data-hero>Turning your great ideas into innovation. <span className="grad">Built well. Governed well.</span></h1>
+            <div className="hero-side" data-hero>
+              <p><b>Ideovate builds AI for your business,</b> then helps you put the quality systems around it so it can be trusted. One Winnipeg team. Since 2014.</p>
               <div className="cta-row">
-                <a className="btn" href="/book/">Book a free consultation</a>
-                <a className="btn btn-ghost" href="#iso">Take the ISO readiness quiz</a>
+                <a className="btn btn-fill" href="/book/">Book a free consultation</a>
+                <a className="btn btn-line" href="#iso">Explore ISO readiness</a>
               </div>
               <p className="trust">On-site across Canada and the US. Remote anywhere.</p>
             </div>
-            <div className="hero-mark">
-              <Mark id="hero" bare />
-              <p className="legend"><span><i className="sw-dot" />The idea</span><span><i className="sw-ring" />The governance around it</span></p>
+          </div>
+        </section>
+
+        <div className="wrap" data-reveal-group>
+          <section className="band" data-reveal>
+            <div><h2>Build well. Govern well.</h2><p>Tell us the idea. In a free consultation we listen, ask questions and tell you honestly what we would do.</p></div>
+            <a className="btn btn-white" href="/book/">Book now &rarr;</a>
+          </section>
+        </div>
+
+        <section className="split" id="about" data-reveal-group>
+          <div className="split-txt" data-reveal>
+            <span className="eyebrow">About Ideovate</span>
+            <h2>Two founders. <span className="grad">One idea: build it well.</span></h2>
+            <p className="lead">Ideovate Quality Solutions Inc. was founded in Winnipeg in 2014 by Vivek Singh and Mamta Sharma. We build AI, then help you govern it with ISO-ready systems, so one team covers the engineering and the discipline around it.</p>
+            <a className="btn btn-line" href="/book/">Talk to the founders</a>
+          </div>
+          <div className="panel" data-reveal>
+            <NodeField />
+            <div className="founders">
+              <figure><img src="/vivek-singh.jpg" alt="Vivek Singh, co-founder of Ideovate" width="220" height="220" /><figcaption><b>Vivek Singh</b><span>Co-founder</span></figcaption></figure>
+              <figure><div className="ph" aria-hidden="true"><Mark id="about" bare className="panel-mark" /></div><figcaption><b>Mamta Sharma</b><span>Co-founder</span></figcaption></figure>
             </div>
           </div>
         </section>
 
-        {/* PATHS: ruled rows, hover wipes to ink */}
-        <section className="paths light">
-          <div className="wrap">
-            <h2>Where do you want to start?</h2>
-            <ul className="rows">
-              {paths.map(([t, d, h]) => (
-                <li key={t}><a className="row" href={h}><span className="row-t">{t}</span><span className="row-d">{d}</span><span className="row-a" aria-hidden="true">→</span></a></li>
-              ))}
-            </ul>
-          </div>
-        </section>
-
-        {/* STORY */}
-        <section className="story dark">
-          <div className="wrap split">
-            <div>
-              <h2>Most firms build AI. Most firms handle ISO. We do both.</h2>
-              <p className="lead">The team that builds your chatbot can also prepare your organisation for ISO 42001, the international standard for managing AI responsibly. You get one plan, one team and no handover gaps between the people who build and the people who govern.</p>
+        <div className="wrap">
+          <section className="services-intro" data-reveal-group>
+            <div data-reveal>
+              <h2>Everything between <span className="grad">the idea and the audit.</span></h2>
+              <p className="lead">We build AI with you, then prepare your organisation for ISO 9001, 14001, 45001, 27001 and 42001. Ideovate prepares and supports; accredited registrars make the final decision.</p>
+              <a className="btn btn-fill" href="#services">Explore our services</a>
             </div>
-            <dl className="points">
-              <div><dt>Faster delivery.</dt><dd>One team from idea to audit.</dd></div>
-              <div><dt>Fewer surprises at audit.</dt><dd>Controls are designed in, not bolted on.</dd></div>
-              <div><dt>AI people can trust.</dt><dd>Customers and regulators can see how it is governed.</dd></div>
-            </dl>
-          </div>
-        </section>
+            <div className="tiles">
+              <a className="tile t1" href="#services" data-reveal><span className="arrow">&rarr;</span><h3>Build AI</h3><p>From a first prototype to production systems.</p></a>
+              <a className="tile t2" href="#iso" data-reveal><span className="arrow">&rarr;</span><h3>Get ISO ready</h3><p>From gap assessment to audit day.</p></a>
+              <a className="tile t3" href="#training" data-reveal><span className="arrow">&rarr;</span><h3>Train your team</h3><p>Practical courses online, in person or hybrid.</p></a>
+            </div>
+          </section>
 
-        {/* SERVICES: grouped, ruled, no card grid */}
-        <section className="services light">
-          <div className="wrap">
-            <h2>Everything between the idea and the audit.</h2>
+          <section className="services">
             {services.map((g) => (
               <div className="group" id={g.id} key={g.group}>
                 <div className="group-head"><h3>{g.group}</h3><p>{g.blurb}</p></div>
@@ -104,13 +100,26 @@ export default function Home() {
               </div>
             ))}
             <p className="note">Ideovate prepares and supports your organisation. Independent, accredited registrars carry out the final audit and decide on registration.</p>
+          </section>
+        </div>
+
+        <section className="story" data-reveal-group>
+          <div className="wrap story-grid">
+            <div data-reveal>
+              <h2>Most firms build AI. Most firms handle ISO. <span className="grad">We do both.</span></h2>
+              <p className="lead">The team that builds your chatbot can also prepare your organisation for ISO 42001, the international standard for managing AI responsibly. You get one plan, one team and no handover gaps between the people who build and the people who govern.</p>
+            </div>
+            <dl className="points">
+              <div data-reveal><dt>Faster delivery.</dt><dd>One team from idea to audit.</dd></div>
+              <div data-reveal><dt>Fewer surprises at audit.</dt><dd>Controls are designed in, not bolted on.</dd></div>
+              <div data-reveal><dt>AI people can trust.</dt><dd>Customers and regulators can see how it is governed.</dd></div>
+            </dl>
           </div>
         </section>
 
-        {/* PROCESS (scroll-scrubbed line) */}
-        <section className="process dark" data-process>
+        <section className="process" data-process>
           <div className="wrap">
-            <h2>A clear path, in four steps.</h2>
+            <h2>A clear path, <span className="grad">in four steps.</span></h2>
             <div className="timeline">
               <span className="line" aria-hidden="true"><i data-progress /></span>
               <ol>{steps.map(([t, d], i) => (<li key={t}><span className="num">{i + 1}</span><div><h3>{t}</h3><p>{d}</p></div></li>))}</ol>
@@ -118,20 +127,21 @@ export default function Home() {
           </div>
         </section>
 
-        {/* INDUSTRIES */}
-        <section className="industries light" id="industries">
+        <Courses />
+
+        <section className="industries" id="industries">
           <div className="wrap">
-            <h2>Built around how your industry works.</h2>
+            <h2>Built around <span className="grad">how your industry works.</span></h2>
             <ul className="chips">{industries.map((i) => <li key={i}>{i}</li>)}</ul>
           </div>
         </section>
 
-        {/* CLOSE */}
-        <section className="final dark">
+        <section className="final" data-reveal-group>
           <div className="wrap">
-            <h2>Have an idea worth building?</h2>
-            <p className="lead">Tell us. We'll tell you how to make it real.</p>
-            <a className="btn" href="/book/">Book a free consultation</a>
+            <div className="band" data-reveal>
+              <div><h2>Have an idea worth building?</h2><p>Tell us. We will tell you how to make it real.</p></div>
+              <a className="btn btn-white" href="/book/">Book a free consultation &rarr;</a>
+            </div>
           </div>
         </section>
       </main>
@@ -142,7 +152,7 @@ export default function Home() {
           <div><b>Contact</b><p>204-590-5053<br />204-999-0880<br />hello@ideovate.ca</p></div>
           <div><b>Serving</b><p>Organisations across Canada and the United States, on-site and remote.</p></div>
         </div>
-        <div className="wrap legal"><span>© 2026 Ideovate Quality Solutions Inc.</span><span>Privacy · Terms · Accessibility · Cookie preferences</span></div>
+        <div className="wrap legal"><span>&copy; 2026 Ideovate Quality Solutions Inc.</span><span>Privacy &middot; Terms &middot; Accessibility &middot; Cookie preferences</span></div>
       </footer>
     </>
   );
