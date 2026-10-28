@@ -5,5 +5,11 @@
   "assets": {
     "directory": "./out",
     "not_found_handling": "404-page"
-  }
+  },
+  "routes": [
+    { "pattern": "ideovate.ca", "zone_name": "ideovate.ca", "custom_domain": true },
+    { "pattern": "www.ideovate.ca", "zone_name": "ideovate.ca", "custom_domain": true }
+  ],
+  "workers_dev": false,
+  "preview_urls": false
 }
