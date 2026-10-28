@@ -1,0 +1,36 @@
+/* Ideovate Quality Solutions Inc. design tokens v1 (Phase 2) */
+:root{
+  /* Dark surfaces (hero, AI sections) */
+  --ink:#0A0B14; --ink-2:#12142A; --ink-3:#1C1F3D; --line-dark:#2A2E55;
+  --on-dark:#F4F6FB; --on-dark-muted:#A9B0C6;
+  /* Light surfaces (ISO, training, trust) */
+  --paper:#F7F5F0; --mist:#ECEAE3; --white:#FFFFFF; --line-light:#DAD6CB;
+  --on-light:#14151F; --on-light-muted:#555B70;
+  /* Signature accents */
+  --spark:#22D3EE;        /* electric cyan: buttons, glow on dark */
+  --spark-deep:#07687C;   /* cyan for text and links on light (AA) */
+  --pulse:#7C5CFF;        /* violet: gradient partner, use sparingly */
+  --pulse-soft:#9B83FF;   /* violet text on dark (AA) */
+  --gradient-spark:linear-gradient(120deg,#22D3EE 0%,#7C5CFF 100%);
+  /* Trust */
+  --trust:#C8A24A; --trust-deep:#8A6A1F; /* gold marks; deep for text on light */
+  /* Status */
+  --ok:#2FBF8F; --warn:#E8A23A; --error:#E5484D;
+  /* Type */
+  --font-display:'Sora',system-ui,sans-serif;
+  --font-text:'Inter',system-ui,sans-serif;
+  --fs-hero:clamp(2.75rem,7vw,6rem); --fs-h1:clamp(2.25rem,5vw,4rem);
+  --fs-h2:clamp(1.75rem,3.2vw,2.75rem); --fs-h3:1.375rem;
+  --fs-body:1.0625rem; --fs-small:.875rem; --lh-body:1.6; --lh-tight:1.05;
+  /* Space (8px base) */
+  --s-1:.5rem; --s-2:1rem; --s-3:1.5rem; --s-4:2rem; --s-6:3rem; --s-8:4rem; --s-12:6rem; --s-16:8rem;
+  --radius:14px; --radius-lg:24px; --container:1200px;
+  /* Motion */
+  --ease:cubic-bezier(.22,1,.36,1);
+  --t-fast:150ms; --t-normal:300ms; --t-slow:700ms;
+  --stagger:60ms;
+  /* Elevation */
+  --shadow-light:0 10px 30px rgba(20,21,31,.08);
+  --glow:0 0 40px rgba(34,211,238,.25);
+}
+@media (prefers-reduced-motion:reduce){:root{--t-fast:0ms;--t-normal:0ms;--t-slow:0ms;--stagger:0ms}}
