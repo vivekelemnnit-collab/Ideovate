@@ -149,7 +149,7 @@ export default function Home() {
       <footer className="footer">
         <div className="wrap foot-grid">
           <div><b>Ideovate Quality Solutions Inc.</b><p>Turning your great ideas into innovation.</p><p>101 Greenwood Avenue, Winnipeg, Manitoba</p></div>
-          <div><b>Contact</b><p>204-590-5053<br />204-999-0880<br />hello@ideovate.ca</p></div>
+          <div><b>Contact</b><p>204-590-5053<br />204-999-0880<br /><a href="mailto:hello@ideovate.ca">hello@ideovate.ca</a><br /><a href="mailto:viveksingh@ideovate.ca">viveksingh@ideovate.ca</a></p></div>
           <div><b>Serving</b><p>Organisations across Canada and the United States, on-site and remote.</p></div>
         </div>
         <div className="wrap legal"><span>&copy; 2026 Ideovate Quality Solutions Inc.</span><span>Privacy &middot; Terms &middot; Accessibility &middot; Cookie preferences</span></div>

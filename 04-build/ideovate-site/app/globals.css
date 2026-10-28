@@ -150,6 +150,7 @@ h3{font-size:1.25rem}
 
 /* Footer */
 .footer{background:var(--navy);color:#B9C3D6;margin-top:64px;padding:64px 0 28px;font-size:.92rem}
+.footer a{color:#fff;text-decoration:none}.footer a:hover{text-decoration:underline}
 .footer b{color:#fff;display:block;margin-bottom:8px}
 .foot-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:40px}
 .legal{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;border-top:1px solid rgba(255,255,255,.12);margin-top:40px;padding-top:20px;font-size:.82rem}
