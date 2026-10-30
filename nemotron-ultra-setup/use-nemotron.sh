@@ -21,7 +21,12 @@ export NVIDIA_API_KEY
 export NODE_USE_ENV_PROXY=1   # needed if you're behind a proxy-only sandbox (e.g. claude.ai cloud sessions)
 
 if ! ccr status 2>/dev/null | grep -q "Running"; then
-  ccr start
+  # Launch fully detached via setsid so it survives even if the invoking shell/job
+  # is later torn down (e.g. a sandbox harness killing a tracked background task's
+  # whole process group after a timeout, which otherwise takes the router down too).
+  setsid nohup ccr start < /dev/null > "$HOME/.ccr_start.log" 2>&1 &
+  disown
+  sleep 3
 fi
 
 export ANTHROPIC_BASE_URL="http://127.0.0.1:3456"
